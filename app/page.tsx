@@ -12,6 +12,8 @@ const images = Array.from(
   (_, index) => `/picture/galeri/${index + 1}.jpeg`
 )
 
+const currentYear = new Date().getFullYear()
+
 type Project = {
   title: string
   category: string
@@ -532,11 +534,12 @@ export default function Page() {
                   layout="fan"
                   sendToBackOnClick={false}
                   cards={images.map((src, index) => (
-                    <img
+                    <Image
                       key={src}
                       src={src}
                       alt={`Gallery image ${index + 1}`}
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 640px) 210px, (max-width: 768px) 260px, 300px"
                       draggable={false}
                       className="h-full w-full object-cover"
                     />
@@ -1438,7 +1441,7 @@ export default function Page() {
 
       {/* FOOTER */}
       <footer className="border-t border-gray-200 dark:border-gray-800 px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
-        © {new Date().getFullYear()} Ubai. Built with Next.js and Tailwind
+        © {currentYear} Ubai. Built with Next.js and Tailwind
         CSS.
       </footer>
     </main>
