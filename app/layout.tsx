@@ -10,7 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Ubai | Frontend Developer',
+  title: 'Ubai | Front-End Engineer',
   description: 'Personal portfolio of Ubai.',
 }
 

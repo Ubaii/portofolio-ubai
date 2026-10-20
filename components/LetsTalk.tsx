@@ -10,7 +10,7 @@ const socialLinks = [
     },
     {
         name: 'Instagram',
-        href: 'https://www.instagram.com/uwebdev_/',
+        href: 'https://www.instagram.com/satriaa.u',
     },
     {
         name: 'TikTok',

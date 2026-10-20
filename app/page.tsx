@@ -6,6 +6,9 @@ import Lanyard from '@/components/Lanyard'
 import Reveal from '@/components/Reveal'
 import TechStack from '@/components/TechStack'
 import Stack from '@/components/Stack'
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+
+const CONTACT_EMAIL = 'satriaubaidah398@gmail.com'
 
 const images = Array.from(
   { length: 14 },
@@ -148,25 +151,6 @@ const projects: Project[] = [
   },
   // TODO: sesuaikan tech, fitur, tantangan, dan link dengan project aslimu
   {
-    title: 'UI Bank BCA',
-    category: 'Frontend Development',
-    description:
-      'Website UI Bank BCA yang dibangun dengan Next.js dan Tailwind CSS, dengan tampilan rapi, responsif, dan mudah digunakan.',
-    image: '/project/bank.jpeg',
-    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-    features: [
-      'Membangun tampilan antarmuka perbankan dengan Next.js.',
-      'Membuat layout responsif menggunakan Tailwind CSS.',
-      'Menyusun reusable components agar tampilan konsisten.',
-    ],
-    challenges:
-      'Menyusun informasi keuangan agar tetap jelas, rapi, dan nyaman dibaca di berbagai ukuran layar.',
-    learnings:
-      'Mempelajari Next.js, Tailwind CSS, reusable components, dan responsive design.',
-    github: '',
-    demo: '',
-  },
-  {
     title: 'Personal Portfolio',
     category: 'Frontend Development',
     description:
@@ -186,6 +170,25 @@ const projects: Project[] = [
     github: '',
     demo: '',
   },
+  {
+    title: 'UI Bank BCA',
+    category: 'Frontend Development',
+    description:
+      'Website UI Bank BCA yang dibangun dengan Next.js dan Tailwind CSS, dengan tampilan rapi, responsif, dan mudah digunakan.',
+    image: '/project/bank.jpeg',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    features: [
+      'Membangun tampilan antarmuka perbankan dengan Next.js.',
+      'Membuat layout responsif menggunakan Tailwind CSS.',
+      'Menyusun reusable components agar tampilan konsisten.',
+    ],
+    challenges:
+      'Menyusun informasi keuangan agar tetap jelas, rapi, dan nyaman dibaca di berbagai ukuran layar.',
+    learnings:
+      'Mempelajari Next.js, Tailwind CSS, reusable components, dan responsive design.',
+    github: '',
+    demo: '',
+  },
 ]
 
 const skills = [
@@ -199,6 +202,10 @@ const skills = [
   'Python',
   'Supabase',
   'Figma',
+  'Google Ads',
+  'Google Analytics',
+  'Graphic Design',
+  'Content Creation',
 ]
 
 const experiences: Experience[] = [
@@ -222,15 +229,58 @@ const experiences: Experience[] = [
     active: true,
   },
   {
-    title: 'Front-End Developer',
+    title: 'Ketua Divisi Humas',
+    subtitle: 'Himpunan Mahasiswa Informatika',
+    period: 'Feb 2026 – Present',
+    description:
+      'Leading the Public Relations division in the Informatics Student Association, developing communication skills, teamwork, and contributing to organizational activities and student development in information technology.',
+    points: [
+      'Managing communication and public relations strategies for the organization.',
+      'Coordinating with team members to plan and execute organizational programs.',
+      'Building relationships with internal and external stakeholders to support organizational goals.',
+      'Developing leadership and organizational management skills in an academic environment.',
+    ],
+    tags: [
+      'Leadership',
+      'Public Relations',
+      'Communication',
+      'Teamwork',
+      'Event Management',
+    ],
+    active: true,
+  },
+  {
+    title: 'Anggota PDD (Publikasi dan Dokumentasi)',
+    subtitle: 'Himpunan Mahasiswa Informatika',
+    period: 'Feb 2026 – Present',
+    description:
+      'Contributing to publication and documentation of organizational activities, creating visual content for information and event promotion needs.',
+    points: [
+      'Creating visual content for organizational information and event promotion.',
+      'Supporting design and publication media needs to deliver information attractively.',
+      'Collaborating with team members in implementing organizational programs.',
+      'Documenting organizational activities and events for internal and external communication.',
+    ],
+    tags: [
+      'Graphic Design',
+      'Content Creation',
+      'Visual Communication',
+      'Documentation',
+      'Teamwork',
+    ],
+    active: true,
+  },
+  {
+    title: 'Front-End Developer & Digital Marketing',
     subtitle: 'Self-Learning & Personal Projects',
     period: 'Ongoing',
     description:
-      'Continuously learning and developing front-end development skills through self-study and hands-on projects. Focused on building responsive, interactive, and user-friendly websites while exploring modern web technologies and UI/UX principles.',
+      'Continuously learning and developing front-end development skills through self-study and hands-on projects. Also expanding knowledge in digital marketing, web analytics, and online advertising to create data-driven web solutions.',
     points: [
       'Learning and applying HTML, CSS, JavaScript, React, and Next.js through practical projects.',
       'Building personal and portfolio projects to improve coding skills, responsive layouts, and reusable components.',
-      'Continuously exploring modern development tools and UI/UX principles to improve website quality.',
+      'Exploring Google Ads and Google Analytics to understand user behavior and optimize web performance.',
+      'Continuously improving technical skills and UI/UX principles to create better digital experiences.',
     ],
     tags: [
       'HTML',
@@ -240,6 +290,8 @@ const experiences: Experience[] = [
       'Next.js',
       'Tailwind CSS',
       'UI/UX',
+      'Google Ads',
+      'Google Analytics',
     ],
     active: true,
   },
@@ -284,6 +336,27 @@ const certificates: Certificate[] = [
     issuer: 'Dibimbing',
     date: '27 – 28 Maret 2026',
     image: '/sertifikat/sertifikat1.jpeg',
+    credentialUrl: '',
+  },
+  {
+    title: 'Google Ads Certification',
+    issuer: 'Google',
+    date: '2026',
+    image: '/sertifikat/google-ads.png',
+    credentialUrl: '',
+  },
+  {
+    title: 'Dicoding Certification',
+    issuer: 'Dicoding Indonesia',
+    date: '2026',
+    image: '/sertifikat/dicoding.png',
+    credentialUrl: '',
+  },
+  {
+    title: 'Google Analytics Certification',
+    issuer: 'Google',
+    date: '2026',
+    image: '/sertifikat/google-analytic.png',
     credentialUrl: '',
   },
   {
@@ -355,7 +428,7 @@ export default function Page() {
 
     // Buka aplikasi email dengan data form yang sudah terisi
     const body = `Nama: ${name}\nEmail: ${email}\n\n${message}`
-    window.location.href = `mailto:ubai.example@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`
 
@@ -391,9 +464,14 @@ export default function Page() {
             </p>
 
             <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">
-              A <span className="text-blue-900 dark:text-blue-800">Frontend</span>{' '}
-              Developer
-              <span>.</span>
+              A{" "}
+              <span className="text-blue-800 dark:text-blue-900">
+                Front-End
+              </span>{" "}
+              <span className="text-blue-800 dark:text-blue-900">
+                Engineer
+              </span>
+              <span className="text-gray-900 dark:text-white">.</span>
             </h1>
 
             <p className="max-w-xl text-base leading-relaxed text-gray-600 dark:text-gray-400 sm:text-lg">
@@ -416,6 +494,39 @@ export default function Page() {
                 Contact Me
               </a>
             </div>
+
+            {/* SOCIAL ICONS - tepat di bawah tombol */}
+            <div className="mt-6 flex items-center gap-4">
+              <a
+                href="https://github.com/Ubaii"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-700 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:text-blue-600 dark:border-gray-700 dark:text-gray-300 dark:hover:text-blue-400"
+              >
+                <FaGithub size={22} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/satriaa.u"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-700 transition-all duration-300 hover:-translate-y-1 hover:border-pink-500 hover:text-pink-500 dark:border-gray-700 dark:text-gray-300 dark:hover:text-pink-400"
+              >
+                <FaInstagram size={22} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/satria-ubaidah-6041673b8/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-700 transition-all duration-300 hover:-translate-y-1 hover:border-blue-600 hover:text-blue-600 dark:border-gray-700 dark:text-gray-300 dark:hover:text-blue-400"
+              >
+                <FaLinkedin size={22} />
+              </a>
+            </div>
           </Reveal>
 
           <Reveal
@@ -424,7 +535,7 @@ export default function Page() {
           >
             <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-blue-500/20 shadow-xl sm:h-72 sm:w-72 md:h-96 md:w-96">
               <Image
-                src="/picture/ubai.jpeg"
+                src="/picture/ube.jpeg"
                 alt="Ubai - Frontend Developer"
                 fill
                 priority
@@ -453,23 +564,46 @@ export default function Page() {
                   Hi, I&apos;m Ubai.
                 </h2>
 
-                <p className="mb-5 text-base leading-8 text-gray-600 dark:text-gray-400 md:text-lg">
-                  I&apos;m an Informatics student with a strong interest in
-                  Frontend Development and UI/UX Design. I enjoy creating
-                  modern, responsive, and user-friendly websites.
-                </p>
+                <div className="space-y-5 text-base leading-8 text-gray-600 dark:text-gray-400 md:text-lg">
+                  <p>
+                    I am an Informatics Engineering student with a strong
+                    interest in Front-End Development and Web Development. I
+                    focus on building responsive, user-friendly, and visually
+                    appealing web applications using modern technologies such
+                    as React.js, Next.js, JavaScript, TypeScript, and Tailwind
+                    CSS.
+                  </p>
 
-                <p className="mb-5 text-base leading-8 text-gray-600 dark:text-gray-400 md:text-lg">
-                  I love turning ideas into digital experiences through clean
-                  code, thoughtful design, and attention to detail. I&apos;m
-                  continuously learning and improving my skills.
-                </p>
+                  <p>
+                    I have experience developing web-based solutions for
+                    business needs, including a cashier system for UMKM and a
+                    PlayStation rental booking website. Through these
+                    projects, I have gained experience in responsive UI
+                    development, integrating front-end interfaces with
+                    back-end functionality, and creating practical digital
+                    solutions.
+                  </p>
 
-                <p className="text-base leading-8 text-gray-600 dark:text-gray-400 md:text-lg">
-                  My goal is to become a skilled Frontend Developer who can
-                  create meaningful digital products and great user
-                  experiences.
-                </p>
+                  <p>
+                    In addition to developing my technical skills, I am
+                    actively involved in the Informatics Student Association,
+                    where I have opportunities to develop my communication,
+                    teamwork, and organizational skills.
+                  </p>
+
+                  <p>
+                    I am continuously learning and exploring new
+                    technologies, including Artificial Intelligence (AI) and
+                    Machine Learning, to expand my knowledge in the
+                    technology field.
+                  </p>
+
+                  <p>
+                    I am open to collaboration, freelance projects,
+                    internships, and opportunities to grow as a Front-End
+                    Developer while creating meaningful digital experiences.
+                  </p>
+                </div>
 
                 <div className="mt-8 flex flex-wrap gap-2">
                   {skills.slice(0, 5).map((skill, index) => (
@@ -1178,7 +1312,7 @@ export default function Page() {
               </p>
 
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-                Let&apos;s Build Something Together.
+                Let&apos;s Build Something Together
                 <span className="text-blue-500">.</span>
               </h2>
 
@@ -1208,7 +1342,7 @@ export default function Page() {
                 <div className="flex flex-col gap-5">
                   {/* Email */}
                   <a
-                    href="satriaubaidah398@gmail.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="group flex items-start gap-4 rounded-2xl border border-gray-100 p-4 transition hover:border-blue-200 hover:bg-blue-50/50 dark:border-gray-800 dark:hover:border-blue-800 dark:hover:bg-blue-950/30"
                   >
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-400">
@@ -1233,14 +1367,14 @@ export default function Page() {
                         Email
                       </span>
                       <span className="block truncate text-sm font-medium text-gray-900 dark:text-gray-100">
-                        satriaubaida398@gmail.com
+                        {CONTACT_EMAIL}
                       </span>
                     </span>
                   </a>
 
                   {/* WhatsApp */}
                   <a
-                    href="https://wa.me/6281348417456"
+                    href="https://wa.me/6281348417605"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-start gap-4 rounded-2xl border border-gray-100 p-4 transition hover:border-blue-200 hover:bg-blue-50/50 dark:border-gray-800 dark:hover:border-blue-800 dark:hover:bg-blue-950/30"
@@ -1266,7 +1400,7 @@ export default function Page() {
                         WhatsApp
                       </span>
                       <span className="block text-sm font-medium text-gray-900 dark:text-gray-100">
-                        +62 813-4841-7456
+                        +62 813-4841-7605
                       </span>
                     </span>
                   </a>
@@ -1318,12 +1452,21 @@ export default function Page() {
                     </a>
 
                     <a
-                      href="https://www.instagram.com/uwebdev._"
+                      href="https://www.instagram.com/satriaa.u"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition hover:border-blue-300 hover:text-blue-700 dark:border-gray-700 dark:text-gray-300 dark:hover:border-blue-700 dark:hover:text-blue-400"
                     >
                       Instagram ↗
+                    </a>
+
+                    <a
+                      href="https://www.linkedin.com/in/satria-ubaidah-6041673b8/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition hover:border-blue-300 hover:text-blue-700 dark:border-gray-700 dark:text-gray-300 dark:hover:border-blue-700 dark:hover:text-blue-400"
+                    >
+                      LinkedIn ↗
                     </a>
                   </div>
                 </div>
