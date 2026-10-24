@@ -128,7 +128,7 @@ export default function TechStack() {
                 </Reveal>
 
                 <Reveal delay={0.15}>
-                    <div className="relative h-[130px] w-full">
+                    <div className="relative 'h-[130px]' w-full">
                         <LogoLoop
                             logos={techLogos}
                             speed={70}

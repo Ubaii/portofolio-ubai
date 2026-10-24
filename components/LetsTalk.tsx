@@ -128,7 +128,7 @@ export default function LetsTalk() {
                         className="absolute inset-10 rounded-full bg-blue-200/50 blur-3xl dark:bg-blue-900/30"
                     />
 
-                    <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-3 shadow-sm dark:border-gray-800 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950/30 sm:p-5">
+                    <div className="relative overflow-hidden rounded-3xl border border-blue-100 'bg-gradient-to-br' from-blue-50 via-white to-indigo-50 p-3 shadow-sm dark:border-gray-800 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950/30 sm:p-5">
                         <Image
                             src="/images/lets-talk.png"
                             alt="Illustration of a developer ready to collaborate on a web project"

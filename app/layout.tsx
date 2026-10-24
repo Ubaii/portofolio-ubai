@@ -1,6 +1,8 @@
+
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import Navbar from '@/components/navbar'
+import { LanguageProvider } from '@/components/context/LanguageContext'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -20,10 +22,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="id" suppressHydrationWarning>
       <body className={plusJakartaSans.className}>
-        <Navbar />
-        {children}
+        <LanguageProvider>
+          <Navbar />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   )
