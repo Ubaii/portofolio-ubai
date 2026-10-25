@@ -426,7 +426,7 @@ export default function Page() {
       active: true,
     },
     {
-      title: 'Frontend Engineer Intern',
+      title: 'Frontend Engineer',
       subtitle: 'Magang · Yogyakarta',
       period: '3 Months',
       description:
